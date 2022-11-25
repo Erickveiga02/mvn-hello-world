@@ -12,7 +12,7 @@ labels:
 spec:
   containers:
   - name: mvn
-    image: maven:3-jdk-8-alpine
+    image: erickveiga/maven-cli
 '''
     }
   }
@@ -21,7 +21,7 @@ spec:
         stage('Build') { 
             steps { 
             containers('mvn'){
-               sh 'mvn clean install'
+               sh 'mvn package'
             }
             }
         }
