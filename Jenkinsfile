@@ -30,5 +30,12 @@ spec:
             }
             }
         }
+        stage('Unit test'){
+            steps{
+                container('mvn'){
+                    sh 'mvn test'
+                }
+            }
+        }
     }
 }
