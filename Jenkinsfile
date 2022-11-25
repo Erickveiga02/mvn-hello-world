@@ -18,6 +18,12 @@ spec:
   }
  
     stages { 
+    stage('Checkout external proj') {
+        steps {
+            git branch: 'master',
+                url: 'https://github.com/Erickveiga02/mvn-hello-world.git'
+        }
+    }
         stage('Build') { 
             steps { 
             containers('mvn'){
