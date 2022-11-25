@@ -25,7 +25,7 @@ spec:
     stages { 
         stage('Build') { 
             steps { 
-            containers('mvn'){
+            container('mvn'){
                sh 'mvn package'
             }
             }
