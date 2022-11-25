@@ -19,9 +19,10 @@ spec:
  
     stages { 
         stage('Build') { 
-        containers('mvn')
             steps { 
+            containers('mvn'){
                sh 'mvn clean install'
+            }
             }
         }
     }
