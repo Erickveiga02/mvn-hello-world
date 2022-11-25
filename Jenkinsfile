@@ -13,6 +13,11 @@ spec:
   containers:
   - name: mvn
     image: erickveiga/maven-cli
+    command:
+    - sleep
+    args:
+    - 9999999
+
 '''
     }
   }
