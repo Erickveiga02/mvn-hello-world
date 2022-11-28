@@ -23,6 +23,23 @@ spec:
     - sleep
     args:
     - 9999999
+ - name: kaniko
+    image: csanchez/kaniko
+    command:
+    - sleep
+    args:
+    - 9999999
+    volumeMounts:
+     - name: kaniko-secret
+       mountPath: /kaniko/.docker
+  volumes:
+    - name: kaniko-secret
+      secret:
+         secretName: docker-credentials
+         items:
+         - key: .dockerconfigjson
+           path: config.json
+
 
 '''
     }
@@ -51,5 +68,12 @@ spec:
                 }
             }
         }
+         tage('Push Image'){
+            steps{
+                container('kaniko'){
+                    sh '/kaniko/executor --dockerfile Dockerfile --destination=erickveiga/app:${env.BUILD_ID}'
+                }
+            }
+         }
     }
 }
