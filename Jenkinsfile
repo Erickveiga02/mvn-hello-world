@@ -46,13 +46,6 @@ spec:
   }
  
     stages { 
-         stage('kubectl'){
-              steps{
-               container('kubectl') { 
-                sh 'kubectl get pods -n app'  
-                    }
-               }
-          }     
           
         stage('Build') { 
             steps { 
