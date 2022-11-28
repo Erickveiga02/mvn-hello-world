@@ -25,17 +25,11 @@ spec:
     - 9999999
   - name: kaniko
     image: aisuko/kaniko-project-executor
-    volumeMounts:
-     - name: kaniko-secret
-       mountPath: /kaniko/.docker
-  volumes:
-  - name: kaniko-secret
-    secret:
-      secretName: docker-credentials
-      items:
-      - key: .dockerconfigjson
-        path: config.json
-
+    command:
+    - sleep
+    args:
+    - 9999999
+    
 
 '''
     }
