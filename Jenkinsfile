@@ -24,7 +24,11 @@ spec:
     args:
     - 9999999
   - name: kaniko
-    image: aiotceo/kaniko-executor:v1.6.0
+    image: gcr.io/kaniko-project/executor:debug
+    command:
+    - sleep
+    args:
+    - 9999999
     
 
 '''
