@@ -25,10 +25,6 @@ spec:
     - 9999999
   - name: kaniko
     image: aiotceo/kaniko-executor:v1.6.0
-    command:
-    - sleep
-    args:
-    - 9999999
     
 
 '''
