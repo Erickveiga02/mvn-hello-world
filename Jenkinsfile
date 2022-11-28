@@ -23,7 +23,7 @@ spec:
     - sleep
     args:
     - 9999999
- - name: kaniko
+  - name: kaniko
     image: csanchez/kaniko
     command:
     - sleep
