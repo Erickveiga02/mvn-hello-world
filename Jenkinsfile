@@ -61,7 +61,7 @@ spec:
                 }
             }
         }
-         tage('Push Image'){
+         stage('Push Image'){
             steps{
                 container('kaniko'){
                     sh '/kaniko/executor --dockerfile Dockerfile --destination=erickveiga/app:${env.BUILD_ID}'
