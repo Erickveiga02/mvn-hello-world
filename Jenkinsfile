@@ -55,8 +55,8 @@ spec:
             steps{
                 container('kaniko'){
                     sh """
-                     /kaniko/executor --context "$(pwd)" --dockerfile "$(pwd)/Dockerfile"  --destination "erickveiga/app"
-                     """
+                          /kaniko/executor --context "$(pwd)" --dockerfile "$(pwd)/Dockerfile"  --destination "erickveiga/app"
+                      """
                 }
             }
          }
