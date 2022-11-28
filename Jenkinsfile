@@ -25,10 +25,6 @@ spec:
     - 9999999
   - name: kaniko
     image: aisuko/kaniko-project-executor
-    command:
-    - sleep
-    args:
-    - 9999999
     volumeMounts:
      - name: kaniko-secret
        mountPath: /kaniko/.docker
