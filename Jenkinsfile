@@ -54,7 +54,7 @@ spec:
          stage('Push Image'){
             steps{
                 container('kaniko'){
-                    sh ' /kaniko/executor --context "$(pwd)" --dockerfile "$(pwd)/Dockerfile"  --destination "erickveiga/app:${env.BUILD_ID}" '
+                    sh ' /kaniko/executor --context "$(pwd)" --dockerfile "$(pwd)/Dockerfile"  --destination "erickveiga/app '
                 }
             }
          }
