@@ -24,7 +24,7 @@ spec:
     args:
     - 9999999
   - name: kaniko
-    image: aisuko/kaniko-project-executor
+    image: aiotceo/kaniko-executor:v1.6.0
     command:
     - sleep
     args:
