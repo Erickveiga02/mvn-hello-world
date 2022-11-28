@@ -33,12 +33,12 @@ spec:
      - name: kaniko-secret
        mountPath: /kaniko/.docker
   volumes:
-    - name: kaniko-secret
-      secret:
-         secretName: docker-credentials
-         items:
-         - key: .dockerconfigjson
-           path: config.json
+  - name: kaniko-secret
+    secret:
+      secretName: docker-credentials
+      items:
+      - key: .dockerconfigjson
+        path: config.json
 
 
 '''
