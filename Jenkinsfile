@@ -17,12 +17,26 @@ spec:
     - sleep
     args:
     - 9999999
+  - name: kubectl
+    image: amaceog/kubectl
+    command:
+    - sleep
+    args:
+    - 9999999
 
 '''
     }
   }
  
     stages { 
+         stage('kubectl'){
+              steps{
+               container('kubectl') { 
+                sh 'kubectl get pods -n default'  
+                    }
+               }
+          }     
+          
         stage('Build') { 
             steps { 
             container('mvn'){
