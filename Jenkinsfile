@@ -36,7 +36,7 @@ spec:
   volumes:
   - name: kaniko-secret
     secret:
-       secretName: docker-credentials
+       secretName: regcred
        items:
        - key: .dockerconfigjson
          path: config.json
@@ -65,7 +65,7 @@ spec:
          stage('Push Image'){
             steps{
                 container('kaniko'){
-                    sh  'cat /kaniko/.docker/config.json '
+                    sh  '/kaniko/executor --context `pwd` --destination erickveiga/hello-world-mvn'
                      
                 }
             }
