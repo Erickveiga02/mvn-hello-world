@@ -65,7 +65,7 @@ spec:
          stage('Push Image'){
             steps{
                 container('kaniko'){
-                    sh  '/kaniko/executor --context "$(pwd)" --dockerfile "$(pwd)/Dockerfile"  --destination "erickveiga/app" '
+                    sh  '/kaniko/executor --context "$(pwd)" --dockerfile "$(pwd)/Dockerfile"  --destination "mvn-hello-world" '
                      
                 }
             }
