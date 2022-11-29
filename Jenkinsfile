@@ -70,5 +70,13 @@ spec:
                 }
             }
          }
+         stage('deploy'){
+            steps{
+                container('kaniko'){
+                    sh  'kubectl apply -f k8s/'
+                     
+                }
+            }
+         }
     }
 }
