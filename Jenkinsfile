@@ -72,7 +72,7 @@ spec:
          }
          stage('deploy'){
             steps{
-                container('kaniko'){
+                container('kubectl'){
                     sh  'kubectl apply -f k8s/'
                      
                 }
