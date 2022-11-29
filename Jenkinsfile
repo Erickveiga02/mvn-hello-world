@@ -73,7 +73,8 @@ spec:
          stage('deploy'){
             steps{
                 container('kubectl'){
-                    sh  'kubectl apply -f k8s/'
+                    sh  'kubectl apply -f k8s/deployment.yaml -n app'
+                    sh  'kubectl apply -f k8s/service.yaml -n app'
                      
                 }
             }
