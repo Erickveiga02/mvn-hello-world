@@ -1,0 +1,19 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: hello-world-mvn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world-mvn
+  template:
+    metadata:
+      labels:
+        app: hello-world-mvn
+    spec:
+      containers:
+        - name: hello-world-mvn
+          image: erickveiga/hello-world-mvn
+          ports:
+            - containerPort: 5000
