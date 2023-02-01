@@ -7,6 +7,7 @@ pipeline {
 kind: Pod
 metadata:
   name: ci
+  namespace: ci-cd-tools
 labels:
   component: mvn
 spec:
