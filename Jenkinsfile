@@ -1,7 +1,7 @@
 pipeline { 
      agent {
     kubernetes {
-      label 'spring-petclinic-demo'
+      inheritFrom 'spring-petclinic-demo'
       defaultContainer 'jnlp'
       yaml '''
 kind: Pod
