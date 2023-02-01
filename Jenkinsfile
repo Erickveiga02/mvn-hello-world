@@ -17,29 +17,6 @@ spec:
     - sleep
     args:
     - 9999999
-  - name: kubectl
-    image: amaceog/kubectl
-    command:
-    - sleep
-    args:
-    - 9999999
-  - name: kaniko
-    image: gcr.io/kaniko-project/executor:debug
-    command:
-    - sleep
-    args:
-    - 9999999
-    volumeMounts:
-    - name: kaniko-secret
-      mountPath: /kaniko/.docker
-  restartPolicy: Never
-  volumes:
-  - name: kaniko-secret
-    secret:
-       secretName: regcred
-       items:
-       - key: .dockerconfigjson
-         path: config.json
     
 '''
     }
