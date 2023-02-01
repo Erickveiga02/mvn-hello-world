@@ -1,4 +1,4 @@
-pipeline_template = 'maven-pipeline-sast'
+pipeline_template = 'maven-pipeline-sast.groovy'
 libraries{
     maven
     
