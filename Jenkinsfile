@@ -1,3 +1,4 @@
+@Library('pipeline-maven')
 pipeline {
     agent{
         label 'maven'
